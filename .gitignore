@@ -1,3 +1,4 @@
 .cache/
 hooks/__pycache__/
 site/
+.DS_Store

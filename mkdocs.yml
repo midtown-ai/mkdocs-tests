@@ -395,8 +395,10 @@ plugins:
       # cards_layout_dir: layouts # (SO) directory where the card layouts are stored
       cards_layout_options:
         background_color: "#0FF1CE8F"
+        background_color: "red"
         background_images: layouts/stairs.jpg
         color: "#DE9151"
+        color: "#ffffff"
         font_family: Roboto   # Default fonts to use to build the card
       # debug: true           #
       # debug_color: yellow   #
