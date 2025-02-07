@@ -324,24 +324,8 @@ plugins:
       authors_file: "{blog}/.authors.yml" # - file where author information is stored
       categories: true        # - enable category pages
       categories_allowed:     # - check post categories against a predefined list
-        - Algorithms
-        - Architectures
-        - Cloud
-        - Companies
-        - Entertainment
-        - Ethics
-        - Frameworks
-        - Hardware
-        - Market
-        - No Code
-        - Paper
-        - People
-        - Platforms
-        - Products
-        - Research
-        - Robots
-        - Software
-        - Trends
+        - Category_A
+        - Category_B
       categories_name: Categories # - category section added to navigation
       # categories_slugify: !!python/object/apply:pymdownx.slugs.slugify
       #   kwds:
@@ -363,9 +347,10 @@ plugins:
       post_date_format: long  # - date format is "January 31, 2024"
       post_dir: "{blog}/posts" # - where files of blog posts should be saved
       post_excerpt: required  # - posts without excerpt separators raise an error
+      post_excerpt: optional
       post_excerpt_max_authors: 2 # - number of authors rendered in post excerpts
       post_excerpt_max_categories: 2 # - number of categories displayed in post excerpts
-      post_excerpt_separator: <!-- end-of-excerpt --> # - content before this separator is part of the excerpt
+      # post_excerpt_separator: '<!-- end-of-excerpt -->' # - content before this separator is part of the excerpt
       post_readtime: true     # - automatically compute the reading time of a post
       post_readtime_words_per_minute: 300 # - parameter used to compute readtime
       post_slugify: !!python/object/apply:pymdownx.slugs.slugify
@@ -394,15 +379,17 @@ plugins:
       # cards_layout: custom  # (SO) name of the default layout in the layout_dir to use
       # cards_layout_dir: layouts # (SO) directory where the card layouts are stored
       cards_layout_options:
-        background_color: "#0FF1CE8F"
-        background_color: "red"
-        background_images: layouts/stairs.jpg
-        color: "#DE9151"
-        color: "#ffffff"
-        font_family: Roboto   # Default fonts to use to build the card
-      # debug: true           #
-      # debug_color: yellow   #
+        background_color: "#ffffff"
+        background_color: "teal"
+        # background_color: transparent # Background color is on top of background image!
+        # background_images: layouts/stairs.jpg # (SO?)
+        color: "teal"         # text color
+        color: "#ffffff"      # text color
+        font_family: Roboto   # text font (default is Roboto)
+      # debug: true           # (SO?)
+      # debug_color: yellow   # (SO?)
       # log: true             # (SO) log errors when generating social cards
+      # logo: docs/assets/images/ourlogo.png
       
   # - tags                    # add support for categorization /!\ require tags in front matters of pages
   # - typeset                 # enrich titles and headlines in navigation and table-of-contents
