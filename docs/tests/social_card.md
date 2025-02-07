@@ -30,3 +30,7 @@ Github
  * http://midtown-ai.github.io/mkdocs-tests/
  * http://midtown-ai.github.io/mkdocs-tests/assets/images/social/tests/index.png
  * http://midtown-ai.github.io/mkdocs-tests/assets/images/social/tests/social_card.png
+
+Source Code
+
+ * https://github.com/midtown-ai/mkdocs-tests

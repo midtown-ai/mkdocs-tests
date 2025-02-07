@@ -7,7 +7,7 @@ mkdocs-autorefs
 mkdocs-git-committers-plugin-2
 mkdocs-git-revision-date-localized-plugin
 # mkdocs-include-markdown-plugin
-mkdocs-material
+mkdocs-material==9.6.3
 mkdocs-mermaid2-plugin
 mkdocs-minify-plugin
 # mkdocs-pdf
