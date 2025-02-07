@@ -1,0 +1,92 @@
+size:                                  # size of the canvas/card
+  width: 1200
+  height: 630
+
+# layers: []
+layers:
+
+  # Background layer
+  - background:                        # background settings
+      color: "#4051b5"                 # - background color or image tint
+      # image: layouts/background.png  # - background image
+    offset:                            # default to origin of the layer, which is top left corner
+      x: 0
+      y: 0
+    # origin: start top
+    # origin: end bottom
+    size:                              # size of the layer
+      height: 630
+      width: 1200
+    typography:                        # text box
+      align: start                     # - text starts at the top left
+      color: white                     # - text color 
+      content: "{{ page.title }}"      # - text content
+      font:                            # - text font
+        family: Roboto
+        style: Bold
+      line:                            # height of text box
+        amount: 3                      # - maximum 3 lines
+        height: 1.25                   # - line spacing
+      # overflow: ellipsis
+      overflow: shrink                 # shrink text to fit in text box
+
+  # Add an intermediary layer
+  - icon:
+      color: "#5c6bc0"
+      value: material/circle
+    offset:
+      x: -1024
+      y: 64
+    size: 
+      height: 2400
+      width: 2400
+
+  # Add an intermediary layer
+  - icon:
+      color: "#3949ab"
+      value: material/circle
+    offset:
+      x: -1024
+      y: 64
+    size: 
+      height: 2400
+      width: 2400
+
+  # Add an icon on top
+  - icon:
+      value: material/cat
+      color: white
+    offset:
+      x: 992
+      y: 64
+    size:
+      height: 144
+      width: 144
+
+definitions:
+
+  - &page_title_with_site_name >-
+    {%- if not page.is_homepage -%}
+      {{ page.meta.get("title", page.title) }} - {{ config.site_name }}
+    {%- else -%}
+      {{ page.meta.get("title", page.title) }}
+    {%- endif -%}
+
+  - &page_description >-
+    {{ page.meta.get("description", config.site_description) or "" }}
+
+tags:
+
+  og:type: website
+  og:title: *page_title_with_site_name
+  og:description: *page_description
+  og:image: "{{ image.url }}"
+  og:image:type: "{{ image.type }}"
+  og:image:width: "{{ image.width }}"
+  og:image:height: "{{ image.height }}"
+  og:url: "{{ page.canonical_url }}"
+
+  twitter:card: summary_large_image
+  twitter:title: *page_title_with_site_name
+  twitter:description: *page_description
+  twitter:image: "{{ image.url }}"

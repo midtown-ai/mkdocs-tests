@@ -1,0 +1,579 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+#
+# Site
+#
+site_author: info@midtown.ai (Emmanuel M.)
+site_description: >-
+  Let's explore this transforming technology. Let's shape the future of AI together.
+# The best site to learn about Artificial Intelligence 5 minutes at a time...
+
+site_dir: site                # directory where generated HTML files are created and assets are copied
+site_name: Midtown AI
+#
+# Site URL is used by the social plugins
+# Site URL is used by the RSS plugin to build item.ling
+#
+# site_url: https://www.midtown.ai/
+site_url: https://midtown-ai.github.io/mkdocs-tests/
+
+#
+# For the 'mkdocs gh-deploy' command
+#
+remote_branch: gh-pages
+remote_name: origin
+ 
+#
+# Banner
+#
+# repo_name: midtown-ai/www   # banner link to documentation source
+# repo_url: "https://github.com/midtown-ai/www" # complete url for documentation source
+# edit_uri: edit/main/docs/   # used for page view/edit /!\ prepended with repo_url if provided
+# edit_uri: https://github.com/midtown-ai/wwww/edit/main/docs/
+
+# Footer
+copyright: Copyright &copy; 2024 - 2025 <a href="https://www.midtown.ai/" rel="noopener" target="_blank">Midtown AI, Inc.</a>
+
+#
+# Directories
+#
+docs_dir: docs                # directory containing the source markdown files
+use_directory_urls: true      # <dir>/index.md generates http://.../<dir>/index.html which can also be accessed as http://.../<dir>/
+
+dev_addr: '127.0.0.1:9000'    # address used when running 'mkdocs serve'
+strict: false                 # do not halt processing when a warning is raised
+watch:                        # files and directories other than docs to watch
+#  - includes
+  - overrides
+
+
+# ---
+# Theme
+#
+# Look and feel of the site
+#
+theme:
+  language: en                # default language is English
+  name: material              # pip install mkdocs-material
+  # name: mkdocs              # default theme
+  # name: readthedocs
+  custom_dir: overrides
+  # highlightjs: True
+  # hljs_languages: [yaml, ]
+  #
+  # Feature flags
+  #
+  # features are on if listed
+  # /!\ beware of typos in feature flags
+  #
+  features:
+    - announce.dismiss        # show cross-button to dismiss announcement
+    # - content.action.edit   # add button to edit source page on github /!\ requires edit_uri
+    # - content.action.view   # add button to view source of page on github /!\ requires edit_uri
+    - content.code.annotate   # offer a way to attach arbitrary content to specific sections of code blocks
+    - content.code.copy       # code blocks have a button to allow user to copy code to clipboard
+    - content.code.select     # code blocks have a button to allow for the selection of line ranges by user
+    # - content.footnote.tooltips # (Sponsor Only) content of footnote appears when hovering its reference link
+    - content.tabs.link       # content tabs across all the documentation site will be linked and switch to the same label
+    - content.tooltips        # better tooltips for elements with a title, permalinks, code copy button, header title, etc.
+    - header.autohide         # hide page header/banner when scrolling down to show more content
+    # - navigation.expand     # sections are expanded, i.e. sub-menus appears and are indented
+    - navigation.footer       # include previous and next links in footer
+    - navigation.indexes      # click on folders/top-menus show the first page in their array (often <folder>/index.md)
+    # - navigation.instant    # site behaves like a single page application (XHR)
+    # - navigation.instant.prefetch  # (Sponsor Only) prefetch a page when user hovers a link to reduce loading time
+    # - navigation.instant.preview   # (Sponsor Only) preview page when hovering an external link
+    # - navigation.instant.progress  # show progress indicator on top of page for slow connection, i.e. phones
+    # - navigation.path       # (?) show breadcrumbs above title of each page
+    # - navigation.prune      # only visible navigation items are included in the rendered HTML
+    # - navigation.sections   # sub-menus appears as if they were top-menus
+    - navigation.tabs         # top-level sections in menu layer below page's header, sub-sections in navigation sidebar
+    # - navigation.tabs.sticky # top-level sections in menu layer always stay visible even when scrolling
+    - navigation.top          # show back-to-top button when user scrolls down and then up
+    - navigation.tracking     # automatically update the url in browser with the active anchor
+    # - search.boost          # boost pages in local search engine based on search boost in front matter
+    # - search.exclude        # allow pages to be excluded from local search engine
+    - search.highlight        # highlight word piece after opening page found in search results
+    - search.share            # a share button in rendered in search box, which allows deep link to current search query
+    - search.suggest          # enable auto-complete in search box
+    # - toc.follow            # table of contents highlights active anchor which always stay visible
+    # - toc.integrate         # table of contents is part of navigation sidebar on left, disabled on right
+    # - toc.top               # (?) back to top button appears when user scrolls down and then up
+  #
+  # Fonts
+  #
+  font:
+    text: Roboto
+    code: Roboto Mono
+  #
+  # Icon
+  #
+  icon:
+    logo: fontawesome/solid/m # logo at the top-left of the header + in cards
+    favicon: img/favicon.ico  # icon for browser tab
+    edit: material/pencil     # icon for content.action.edit button
+    view: material/eye        # icon for content.action.view button
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+    admonition:
+      #
+      # octicons
+      #
+      abstract: octicons/checklist-16
+      bug: octicons/bug-16
+      # danger: octicons/zap-16
+      example: octicons/beaker-16
+      failure: octicons/x-circle-16
+      info: octicons/info-16
+      # note: octicons/tag-16
+      # question: octicons/question-16
+      quote: octicons/quote-16
+      success: octicons/check-16
+      # tip: octicons/squirrel-16
+      # warning: octicons/alert-16
+      #
+      # fontawesome icons
+      #
+      abstract: fontawesome/solid/book
+      bug: fontawesome/solid/robot
+      # danger: fontawesome/solid/skull
+      example: fontawesome/solid/flask
+      failure: fontawesome/solid/bomb
+      info: fontawesome/solid/circle-info
+      # note: fontawesome/solid/note-sticky
+      # question: fontawesome/solid/circle-question
+      quote: fontawesome/solid/quote-left
+      success: fontawesome/solid/check
+      # tip: fontawesome/solid/bullhorn
+      # warning: fontawesome/solid/triangle-exclamation
+
+  # logo: img/logo.png
+  #
+  # Color palette
+  #
+  # use to set the light and dark mode
+  # colors: red, pink, purple, deep purple, indigo, blue, light blue, cyan, teal, green, light green
+  # colors: lime, yellow, amber, orange, deep orange, brown, grey, blue grey, black, white, and CUSTOM
+  #
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        # icon: material/brightness-auto
+        icon: material/link
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default         # color scheme
+      accent: purple          # color of interactive elements, e.g. hovered links, buttons, scrollbars
+      primary: teal           # color of top bar, the sidebar, text links, card background, and other components
+      toggle:                 # toggle button for light/dark mode
+        # icon: material/weather-night
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      accent: lime
+      primary: teal
+      toggle:
+        # icon: material/weather-sunny
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+
+
+# ---
+# Markdown Extensions
+#
+# are extensions to the standard Markdown syntax
+# written in python and packaged in modules
+# may require a `pip install pymdown-extensions` unless `pip install mkdocs-material-extensions` was run!
+#
+markdown_extensions:
+  - abbr                      # support for abbreviation files which are similar to reference links
+  # - admonition              # (!) deprecated by pymdownx.blocks.admonition
+  - attr_list                 # allow addition of HTML and CSS to markdown ![](image.png){align:left}
+  # - def_list                # enable the use of definition list
+  - footnotes                 # allow footnotes in a page using[^1] and then [^1]: footnote text
+  - md_in_html                # allow md in html for grid /!\ require attr_listDd
+  - pymdownx.arithmatex:      # preserve LaTeX math equations /!\ require extra_javascript file
+      generic: true           # - escape necessary symbols and wrap output
+  # - pymdownx.betterm        # improve emphasis (bold and italic) handling
+  # - pymdownx.caret          # caret can be used as an ^^insert tag^^ or for superscript H^2^O
+  # - pymdownx.critic         # support for review of page contents to be reviewed and approved
+  - pymdownx.blocks.admonition # support for UI call-outs (warning, ...) ex /// warning | "Beware" + /// 
+  - pymdownx.blocks.caption   # support for captions onUI elements ex /// details | "Beware" +type/open+ ///
+  - pymdownx.blocks.details   # support for collapsible UI elements ex /// details | "Beware" +type/open+ ///
+  - pymdownx.emoji:           # adds support for inserting emoji via simple short names :smile:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  # - pymdownx.fancylist      # extends the list handling formats
+  # - pymdownx.keys           # better representation of keyboard kode code, e.g. ctrl-alt-del
+  - pymdownx.highlight:       # adds support for highlighting in code fences(triple backticks) /!\ require superfences
+      anchor_linenums: true   # - line numbers have a permalink, useful for sharing
+      line_spans: __span      # 
+      linenums: false         # - show line numbers by default
+      pygments_lang_class: true
+  - pymdownx.inlinehilite     # inline code highligther /!\ requires highlight ex: `#!python range()`
+  # - pymdownx.key            # for better visual rendering of keyboard press, e.g. press ++ctrl+alt+delete++
+  - pymdownx.magiclink        # turn URLs, mentions, Jira ID into clickable links
+  - pymdownx.mark             # use a marker to highlight text, such as ==highlighted text==
+  # - pymdownx.progressbar    # render a static progress bar toward a goal
+  - pymdownx.saneheaders      # recognize a markdown headers only if spaces are present after the hashes (#)
+  # - pymdownx.smartsymbols   # add syntax for creating special characters such as <--> 1/4 2nd etc.
+  - pymdownx.snippets:        # include content of one or more files with --8<-- (scissor) notation
+      auto_append:            # - files automatically appended to the end of all md files
+        - abbreviations.md    # -- abbreviations
+        - reference_links.md  # -- reference links 
+      base_path:              # - search paths for snippets files that are included (or automatically appended)
+        - includes
+      check_paths: true       # - check snippet file paths
+  - pymdownx.striphtml        # sanitize rendered html by striping JavaScript, tags, attributes, etc.
+  - pymdownx.superfences:     # add method to create block without indentation using /// and options /!\ used by highlight ext
+      custom_fences:          # - code fence to live as-is and whose processing is done by another plugin/extension
+        - name: mermaid       # -- ```mermaid
+          class: mermaid      # -- turn code block into a <div class="mermaid"> ... </div>
+          format: !!python/name:mermaid2.fence_mermaid_custom
+  - pymdownx.tabbed:          # allows rendering of page contents with multi-tab widget, e.g. === Tab 1 /!\ require superfences
+      alternate_style: true   # - tabs are created with CSS, no JS needed!
+      slugify: !!python/object/apply:pymdownx.slugs.slugify # - generate anchor links (slugs) for each tab from their titles
+        kwds:                 # --
+          case: lower         # --- lowercase anchor links with #anchor-links-<tab_title>
+  # - pymdownx.tasklist       # enable the use of [X] tasks lists
+  # - pymdownx.tilde          # tilde can be used for text strike through ~~delete~~ or subscript H~2O
+  # - smarty                  # turn ASCII dashes, quotes, ellipses into their HTML entity equivalents
+  - tables                    # support for tables (enabled by default!)
+  - toc:                      # create permalinks and customize display of table-of-contents
+      permalink: true         # - add permalinks to menus
+      permalink: "#"          # - character to make permalink visible
+      # permalink_title: Anchor link to this section for reference # (?) title when hovering the permalink
+      # title: On this page     # - title of the table-of-contents
+      # toc_depth: 3          # hide level 4-6+ from table-of-contents
+
+
+# ---
+# Documentation layout
+#
+# Everything in the navigation is built by default
+#
+nav:
+  - Home: index.md
+  - Blog:
+    - blog/index.md
+  - Tests:
+    - Tests: tests/index.md
+    - Basics: tests/basics.md
+    - Blocks: tests/blocks.md
+    - CSS: tests/css.md
+    - Custom Fences: tests/custom_fences.md
+    - Images: tests/images.md
+    - Tables: tests/tables.md
+    - Widgets: tests/widgets.md
+    - PDF Docs: tests/pdf_docs.md
+    - YouTube Videos: tests/youtube_videos.md
+    - Google Slides: tests/google_slides.md
+    - Megaphone Podcasts: tests/megaphone_podcasts.md
+    - Social Card: tests/social_card.md
+    - Substack Newsletter: tests/substack_newsletter.md
+
+#
+# Remove warnings for the following pages if not in the navigation
+#
+# not_in_nav: |
+#   /forms/donation.md
+
+
+# ---
+# Hooks
+#
+# are plugins equivalent in source code!
+# /!\ If priorities are not explicitly set, their order is important!
+#
+hooks:
+  # - hooks/create_zip_archive.py
+  - hooks/embed_pdf_file.py
+  - hooks/embed_youtube_video.py
+  # - hooks/mkdocs_advanced_example.py       # log when URL are using non-HTTPS links
+  # - hooks/mkdocs_simple_example.py
+  # - hooks/share_on_social_media.py
+  # - hooks/shortcode.py
+  # - hooks/translations.py
+
+
+# ---
+# Plugins
+#
+# are builtin python scripts or distributed in module
+# include functions that are hooks triggered at particular events (on_build, on_serve, on_templating, etc.)
+#
+plugins:
+  #
+  # Built-in plugins
+  #
+  - blog:
+      enabled: !ENV [BLOG_PLUGIN_ENABLED, true]
+      archive: true           # - enable archive pages
+      archive_date_format: yyyy # - date format for archive page titles 
+      archive_name: Archive   # - title of archive section in blog navigation
+      # archive_pagination: true # - (SO) enable pagination on archive pages
+      # archive_pagination_per_page: 12 # - (SO) number of posts per archive page
+      archive_toc: true       # - table of contents display post titles on archive pages
+      archive_url_date_format: yyyy # - date for archive URLs
+      archive_url_format: "archive/{date}" # - archive page URL for all posts with {date}
+      authors: true           # - enable post authors
+      authors_file: "{blog}/.authors.yml" # - file where author information is stored
+      categories: true        # - enable category pages
+      categories_allowed:     # - check post categories against a predefined list
+        - Algorithms
+        - Architectures
+        - Cloud
+        - Companies
+        - Entertainment
+        - Ethics
+        - Frameworks
+        - Hardware
+        - Market
+        - No Code
+        - Paper
+        - People
+        - Platforms
+        - Products
+        - Research
+        - Robots
+        - Software
+        - Trends
+      categories_name: Categories # - category section added to navigation
+      # categories_slugify: !!python/object/apply:pymdownx.slugs.slugify
+      #   kwds:
+      #     case: lower
+      # categories_slugify_separator: - # - separator for the category slugification!
+      categories_toc: false   # - table of contents displays post titles on category pages
+      categories_url_format: "category/{slug}" # - URL format used to generate category pages
+      blog_dir: blog          # - where the content of the blog is located
+      blog_toc: true          # - display post titles in views
+      draft: false            # - don't render draft when site is built
+      draft_if_future_date: true # - posts with future dates are considered as draft
+      draft_on_serve: true    # - show drafts when 'mkdocs serve' is run
+      pagination: true        # - enable pagination in blog home page
+      pagination_format: "~2~" # - navigation widget format for pagination
+      pagination_if_single_page: false # - disable pagination if only a few posts
+      pagination_keep_content: false # - ???
+      pagination_per_page: 5  # - number of post in rendered page
+      pagination_url_format: "page/{page}" # - URL format for paginated views
+      post_date_format: long  # - date format is "January 31, 2024"
+      post_dir: "{blog}/posts" # - where files of blog posts should be saved
+      post_excerpt: required  # - posts without excerpt separators raise an error
+      post_excerpt_max_authors: 2 # - number of authors rendered in post excerpts
+      post_excerpt_max_categories: 2 # - number of categories displayed in post excerpts
+      post_excerpt_separator: <!-- end-of-excerpt --> # - content before this separator is part of the excerpt
+      post_readtime: true     # - automatically compute the reading time of a post
+      post_readtime_words_per_minute: 300 # - parameter used to compute readtime
+      post_slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+      # post_slugify_separator: - # - a slug is formatted as 'this-is-my-title'
+      post_url_date_format: yyyy/MM/dd # - date in URLs ~ 2024/01/31
+      # post_url_format: "{date}/{slug}" # - blog/2024/01/31/<slug>
+      post_url_format: "{slug}" # - blog/<slug>
+      # post_url_format: "{categories}/{slug}" # - blog/<cat-1>/<cat-2>/<slug>
+      post_url_max_categories: 2 # - number of categories in post URLs
+  # - group                   # enable/disable plugins in groups
+  # - info                    # used to report bugs using zip files
+  # - meta                    # set frontmatter for files in a directory /!\ 
+  # - offline                 # package site in a zip file to be shared
+  # - optimize                # optimize/compress media files for best latency
+  # - privacy                 # all external asset URLs are rewritten to point to local copies
+  # - projects                # split very large sites into smaller ones for faster rebuild and parallel development
+  - search                    # add search bar to header and enable search
+  - social:                   # used to build social card for post on WhatsApp, etc
+      enabled: !ENV [SOCIAL_PLUGIN_ENABLED, true]
+      # concurrency: 1        # (SO) number of CPU cores to use to generate the cards
+      # cache: false          # (SO) bypass the cache and regenerate the enter set of cards
+      cache_dir: !ENV [SOCIAL_CACHE_DIR, .cache/plugins/social] # Where the generated cards are locally saved
+      cards: true             # build or do not build cards by default
+      # cards_layout: custom  # (SO) name of the default layout in the layout_dir to use
+      # cards_layout_dir: layouts # (SO) directory where the card layouts are stored
+      cards_layout_options:
+        background_color: "#0FF1CE8F"
+        background_images: layouts/stairs.jpg
+        color: "#DE9151"
+        font_family: Roboto   # Default fonts to use to build the card
+      # debug: true           #
+      # debug_color: yellow   #
+      # log: true             # (SO) log errors when generating social cards
+      
+  # - tags                    # add support for categorization /!\ require tags in front matters of pages
+  # - typeset                 # enrich titles and headlines in navigation and table-of-contents
+  #
+  # Internal plugins
+  # ------------------
+  #
+  # - youtube_embed_plugin:
+  #     module: plugins.youtube_embed_plugin
+  #
+  # External plugins
+  # ------------------
+  #
+  # check requirements.txt for module installation
+  #
+  # Shorter links between pages and anchor manipulation
+  # @ https://github.com/mkdocstrings/autorefs
+  # pip install mkdocs-autorefs
+  - autorefs
+  # linking GitHub profiles of contributors at the bottom of each page
+  # @ https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/
+  # pip install mkdocs-git-committers-plugin-2
+  - git-committers:
+      enabled: !ENV [GITCOMMITTERS_PLUGIN_ENABLED, true]
+      branch: main
+      cache_dir: !ENV [GITCOMMITTERS_CACHE_DIR, .cache/plugins/git-committers/, ]
+      docs_path: docs/
+      repository: midtown-ai/wwww
+      token: !!python/object/apply:os.getenv ["GITCOMMITTERS_APIKEY"] # To avoid github rate limits
+  # Support for adding the date of the last update and creation of a doc at the bottom of each page
+  # @ https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/
+  # pip install mkdocs-git-revision-date-localized-plugin
+  - git-revision-date-localized:
+      enabled: !ENV [GITREVISIONDATE_PLUGIN_ENABLED, true]
+      enable_creation_date: true
+      fallback_to_build_date: true
+      locale: en
+  # Include other files in a markdown file
+  # @ https://github.com/mondeja/mkdocs-include-markdown-plugin
+  # pip install mkdocs-include-markdown-plugin
+  # /!\ deprecated by pymdownx.snippets
+  # - include-markdown
+  # Support for mermaid diagrams
+  # @ https://github.com/fralau/mkdocs-mermaid2-plugin
+  # pip install mkdocs-mermaid2-plugin
+  # /!\ With material theme, use pymdownx.superfences
+  - mermaid2:
+      enabled: !ENV [MERMAID2_PLUGIN_ENABLED, true]
+  # Support for embedded PDFs (replaced by PDF hook)
+  # @ https://github.com/ThomasTNO/mkdocs-pdf
+  # pip install mkdocs-pdf
+  # - mkdocs-pdf
+  # Support for embedded videos (replaced by youtube hook)
+  # @ https://github.com/soulless-viewer/mkdocs-video
+  # pip install mkdocs-video
+  # - mkdocs-video:
+  #     is_video: False         # Use <video/> instead of <iframe/>
+
+  # Compress downloaded files to minimize latency
+  # @ https://github.com/byrnereese/mkdocs-minify-plugin
+  # pip install mkdocs-minify-plugin
+  - minify:
+      enabled: !ENV [MINIFY_PLUGIN_ENABLED, true]
+      minify_css: true        # Minify content of CSS files
+      minify_html: false      # Minify content of generated HTML files
+      minify_js: true         # Minify content of JS files
+
+  # Add an RSS feed to allow users to subscribe to the blog and get notified on new posts
+  # @ https://guts.github.io/mkdocs-rss-plugin/#quickstart
+  # pip install mkdocs-rss-plugin
+  - rss:
+      enabled: !ENV [RSS_PLUGIN_ENABLED, true]
+      abstract_chars_count: 160 # item description length
+      abstract_delimiter: <!-- end-of-excerpt --> # mark where the description ends (unless provided in page.meta.rss.feed_description)
+      cache_dir: !ENV [RSS_CACHE_DIR, .cache/plugins/rss]
+      categories:             # include posts' categories and tags in the feed
+        - categories          # will look in page.meta.categories
+        # - tags              # will look into page.meta.tags
+  #   comments_path: "#__comments" # path to comments to add to each item (if using Disqus or Isso)
+      date_from_meta:         # pudDate field for each item with dates not from git log (default), but from git log with page.meta ...
+        as_creation: date.created # - ... as creation date
+        as_update: date.updated   # - ... as update date
+        datetime_format: "%Y-%m-%d %H:%M"
+        default_timezone: America/Los_Angeles
+      feed_description: "Let's explore this transforming technology. Let's shape the future of AI together."
+      feed_title: Midtown AI (blog feed)
+      feed_ttl: 1440          # feed's cache time
+      feeds_filenames:        # use to customize output feed URLs
+        json_created: feed_json_created.json
+        json_updated: feed_json_updated.json
+        rss_created: feed_rss_created.xml
+        rss_updated: feed_rss_updated.xml
+      image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg.png # feed illustration image
+      json_feed_enabled: true # enable/disable the JSON feed
+      length: 20              # number of items to include in feed
+      match_path: "blog/posts/.*" # filter pages to be included in feed based on URL matching
+      pretty_print: true      # prettified XML
+      rss_feed_enabled: true  # enable the RSS feed
+      url_parameters:         # Key/value pairs automatically added to URLs
+        # Urchin Tracking Module (UTM) parameters
+        utm_campaign: "feed-syndication" # identifies what was clicked to bring the user to the site
+        utm_medium: "RSS"     # type of link used to connect
+        utm_source: "documentation" # source site that sent the traffic
+  #   use_git: true           # enable/disable extraction of metadata from git log
+      use_material_blog: true # enable/disable integration with material blog plugin
+  #   use_material_social_cards: true # enable/disable integration with material social cards plugin
+
+#
+# Extra Object
+#
+# is a python dictionary passed to to the templates
+# is useful for custom themes
+#
+extra:
+  # analytics:
+  #   provider: google
+  #   property: !ENV GOOGLE_ANALYTICS_KEY   # Key is passed as an environment variable
+  generator: false              # remove the 'Made with Material from MkDocs' notice from footer
+  # homepage: https://www.google.com # Where you go when you click on logo in header and sidebar link to homepage
+  social:                       
+    # add social icon at bottom-right of page
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/midtown_ai
+      name: Follow us on X
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:ai4all@midtown.ai
+      name: Send us an email
+    # - icon: fontawesome/brans/mastodon
+    #   link: https://fosstodon.org/@midtown_ai
+    #   name: Midtown on Mastodon
+    # - icon: fontawesome/brands/github
+    #   link: https://github.com/midtown-ai
+    #   name: Star our Github repositories
+    # - icon: fontawesome/brands/linkedin
+    #   link: https://www.linkedin.com/in/emayssat/
+    #   name: Connect with us on LinkedIn
+    # - icon: /material/mailbox
+    #   name: contact us
+    #   link: /contact
+  status:
+    new: Recently added
+    deprecated: Deprecated
+
+#
+# Extra CSS
+#
+extra_css:
+  - stylesheets/custom_admonitions.css
+  - stylesheets/custom_effects.css
+  - stylesheets/custom_tables.css
+  - stylesheets/custom_text.css
+  - stylesheets/custom_theme.css
+  # - stylesheets/custom.7c86dd97.min.css      # included in override/main.html Not needed here?
+
+#
+# Extra JavaScript
+#
+extra_javascript:
+  # Support Latex math equations
+    - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+    - javascript/mathjax.js
+  # Make data tables sortable by clicking on column names
+  # More on tablesort at https://tristen.ca/tablesort/demo/
+    - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+    - javascript/tablesort.js
+
+#
+# Validation at build time
+# Validation is set to maximum strictness (recommended for most sites)
+#
+validation:
+  # absolute_links: warn
+  absolute_links: relative_to_docs
+  anchors: warn
+  omitted_files: warn
+  unrecognized_links: warn

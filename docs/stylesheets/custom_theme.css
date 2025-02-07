@@ -1,0 +1,69 @@
+
+/* set the primary color when the palette.primary is set to 'custom' */
+:root {
+  --md-primary-fg-color:        #EE0F0F;
+  --md-primary-fg-color--light: #ECB7B7;
+  --md-primary-fg-color--dark:  #90030C;
+}
+/* palette.primary set to 'custom' and palette.scheme set to 'youtube' */
+[data-md-color-scheme="youtube"] {
+  --md-primary-fg-color:        #EE0F0F;
+  --md-primary-fg-color--light: #ECB7B7;
+  --md-primary-fg-color--dark:  #90030C;
+}
+
+/*
+ * Appears/disappears when in a given display mode
+ *
+ */
+
+
+/* Default visibility: show light-mode image
+ * no dynamic attribute is default/light-mode
+ */
+img.light-mode {
+    display: block;
+}
+
+img.dark-mode {
+    display: none;
+}
+
+/* When in dark-mode
+ * The data-md-color-scheme attribute is used by MkDocs Material to indicate the active theme.
+ */
+[data-md-color-scheme="slate"] img.light-mode {
+    display: none;
+}
+
+[data-md-color-scheme="slate"] img.dark-mode {
+    display: block;
+}
+
+/*
+ * External links
+ */
+
+.md-nav__link[href^="http"]::after {
+    content: "↗"; /* Adds an icon for external links */
+    margin-left: 5px;
+}
+
+/*        BEING TESTED! */
+/*
+ * Cards
+ */
+.card.no-border {
+    border: none; /* Removes the border */
+    box-shadow: none; /* Removes any shadow if applied */
+}
+.card.no-border:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a light shadow on hover */
+}
+/*
+ * Content area
+ */
+.md-grid {
+  /* max-width: initial; */
+  max-width: 1440px; 
+}

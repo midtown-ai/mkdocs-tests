@@ -1,0 +1,137 @@
+/*
+ * Effects
+ */
+
+.static {
+}
+
+@keyframes heartbeat {
+  0%, 40%, 80%, 100% {
+    transform: scale(1);
+  }
+  20%, 60% {
+    transform: scale(1.15);
+  }
+}
+.heartbeating {
+  animation: heartbeat 1000ms infinite;
+  transform-origin: center; /* Keeps the element centered */
+}
+
+/* fading effect */
+@keyframes fade-in-and-out {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fading-in-and-out {
+    animation: fade-in-and-out 3s infinite; /* Adjust duration as needed */
+}
+
+@keyframes vertical-bounce {
+    0%, 50%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-2px);
+    }
+    75% {
+        transform: translateY(+2px);
+    }
+}
+.bouncing-vertically {
+    animation: vertical-bounce 1s infinite; /* Adjust duration as needed */
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+.flipping {
+    animation: flip 2s infinite; /* Adjust duration as needed */
+    display: inline-block; /* Ensures proper 3D rotation */
+    // backface-visibility: hidden; /* Hides the back side of the text */
+}
+
+@keyframes shake {
+    0%, 5%, 95%, 100% {
+        transform: rotate(0deg);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: rotate(-5deg);
+    }
+    20%, 40%, 60%, 80% {
+        transform: rotate(5deg);
+    }
+}
+.shaking {
+    animation: shake 2s ease-in-out infinite; /* Adjust duration as needed */
+    display: inline-block; /* Ensures proper rendering */
+    transform-origin: center; /* Keeps the rotation centered */
+    animation-delay: 1s; /* Delay before repeating */
+}
+
+@keyframes clockwise-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    95% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg); /* Idle state */
+    }
+}
+
+.spinning-clockwise {
+    animation: clockwise-spin 5s linear infinite; /* Adjust total duration as needed */
+    display: inline-block; /* Ensures proper rendering */
+    transform-origin: center; /* Keeps the spin centered */
+}
+
+@keyframes counter-clockwise-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    95% {
+        transform: rotate(-360deg);
+    }
+    100% {
+        transform: rotate(-360deg); /* Idle state */
+    }
+}
+
+.spinning-counter-clockwise {
+    animation: counter-clockwise-spin 5s linear infinite; /* Adjust total duration as needed */
+    display: inline-block; /* Ensures proper rendering */
+    transform-origin: center; /* Keeps the spin centered */
+}
+
+@keyframes horizontal-bounce {
+    0%, 50%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-2px);
+    }
+    75% {
+        transform: translateX(+2px);
+    }
+}
+.bouncing-horizontally {
+    animation: horizontal-bounce 1s infinite; /* Adjust duration as needed */
+}
