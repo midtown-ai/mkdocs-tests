@@ -166,7 +166,8 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default         # color scheme
       accent: purple          # color of interactive elements, e.g. hovered links, buttons, scrollbars
-      primary: teal           # color of top bar, the sidebar, text links, card background, and other components
+      # primary: teal         # color of top bar, the sidebar, text links, card background, and other components
+      primary: green
       toggle:                 # toggle button for light/dark mode
         # icon: material/weather-night
         icon: material/toggle-switch
@@ -175,7 +176,8 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       accent: lime
-      primary: teal
+      # primary: teal
+      primary: green
       toggle:
         # icon: material/weather-sunny
         icon: material/toggle-switch-off-outline
@@ -264,18 +266,18 @@ nav:
     - Tests: index.md
     - Template: template.md
     - Basics: basics.md
-    - Blocks: tests/blocks.md
-    - CSS: tests/css.md
-    - Custom Fences: tests/custom_fences.md
-    - Images: tests/images.md
-    - Tables: tests/tables.md
-    - Widgets: tests/widgets.md
-    - PDF Docs: tests/pdf_docs.md
-    - YouTube Videos: tests/youtube_videos.md
-    - Google Slides: tests/google_slides.md
-    - Megaphone Podcasts: tests/megaphone_podcasts.md
-    - Social Card: tests/social_card.md
-    - Substack Newsletter: tests/substack_newsletter.md
+    - Blocks: blocks.md
+    - CSS: css.md
+    - Custom Fences: custom_fences.md
+    - Images: images.md
+    - Tables: tables.md
+    - Widgets: widgets.md
+    - PDF Docs: pdf_docs.md
+    - YouTube Videos: youtube_videos.md
+    - Google Slides: google_slides.md
+    - Megaphone Podcasts: megaphone_podcasts.md
+    - Social Card: social_card.md
+    - Substack Newsletter: substack_newsletter.md
   - About: https://mkdocs-www.midtown.ai/about
 
 #
@@ -557,6 +559,14 @@ extra_javascript:
   # More on tablesort at https://tristen.ca/tablesort/demo/
     - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
     - javascript/tablesort.js
+
+#
+# Extra files
+#
+# used to copy docs files as is
+#
+extra_files:
+  - CNAME
 
 #
 # Validation at build time
