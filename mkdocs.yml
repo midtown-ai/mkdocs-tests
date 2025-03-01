@@ -15,7 +15,8 @@ site_name: Midtown AI
 # Site URL is used by the RSS plugin to build item.ling
 #
 # site_url: https://www.midtown.ai/
-site_url: https://midtown-ai.github.io/mkdocs-tests/
+# site_url: https://midtown-ai.github.io/mkdocs-tests/
+site_url: https://tests.midtown.ai/
 
 #
 # For the 'mkdocs gh-deploy' command
