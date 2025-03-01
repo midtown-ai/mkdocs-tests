@@ -261,9 +261,9 @@ nav:
   - Blog:
     - blog/index.md
   - Tests:
-    - Template: tests/template.md
-    - Tests: tests/index.md
-    - Basics: tests/basics.md
+    - Tests: index.md
+    - Template: template.md
+    - Basics: basics.md
     - Blocks: tests/blocks.md
     - CSS: tests/css.md
     - Custom Fences: tests/custom_fences.md
