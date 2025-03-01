@@ -34,3 +34,13 @@ Github
 Source Code
 
  * https://github.com/midtown-ai/mkdocs-tests
+
+Mkdocs plugin source
+
+ * https://github.com/squidfunk/mkdocs-material/blob/master/src/plugins/social/plugin.py
+
+Docs
+
+ * https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/
+
+ {% youtube "https://www.youtube.com/watch?v=4OjnOc6ftJ8" %}

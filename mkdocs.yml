@@ -29,7 +29,7 @@ remote_name: origin
 # repo_name: midtown-ai/www   # banner link to documentation source
 # repo_url: "https://github.com/midtown-ai/www" # complete url for documentation source
 # edit_uri: edit/main/docs/   # used for page view/edit /!\ prepended with repo_url if provided
-# edit_uri: https://github.com/midtown-ai/wwww/edit/main/docs/
+edit_uri: https://github.com/midtown-ai/mkdocs-tests/edit/main/docs/
 
 # Footer
 copyright: Copyright &copy; 2024 - 2025 <a href="https://www.midtown.ai/" rel="noopener" target="_blank">Midtown AI, Inc.</a>
@@ -69,7 +69,7 @@ theme:
   features:
     - announce.dismiss        # show cross-button to dismiss announcement
     # - content.action.edit   # add button to edit source page on github /!\ requires edit_uri
-    # - content.action.view   # add button to view source of page on github /!\ requires edit_uri
+    - content.action.view   # add button to view source of page on github /!\ requires edit_uri
     - content.code.annotate   # offer a way to attach arbitrary content to specific sections of code blocks
     - content.code.copy       # code blocks have a button to allow user to copy code to clipboard
     - content.code.select     # code blocks have a button to allow for the selection of line ranges by user
@@ -257,10 +257,11 @@ markdown_extensions:
 # Everything in the navigation is built by default
 #
 nav:
-  - Home: index.md
+  - Home: https://mkdocs-www.midtown.ai
   - Blog:
     - blog/index.md
   - Tests:
+    - Template: tests/template.md
     - Tests: tests/index.md
     - Basics: tests/basics.md
     - Blocks: tests/blocks.md
@@ -275,6 +276,7 @@ nav:
     - Megaphone Podcasts: tests/megaphone_podcasts.md
     - Social Card: tests/social_card.md
     - Substack Newsletter: tests/substack_newsletter.md
+  - About: https://mkdocs-www.midtown.ai/about
 
 #
 # Remove warnings for the following pages if not in the navigation
