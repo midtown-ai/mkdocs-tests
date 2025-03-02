@@ -261,8 +261,11 @@ markdown_extensions:
 #
 nav:
   - Home: https://mkdocs-www.midtown.ai
-  - Blog:
-    - blog/index.md
+  - Blog: https://blog.midtown.ai/
+  - Projects: https://projects.midtown.ai/
+  - Glossary: https://glossary.midtown.ai/
+  - Tracks: https://tracks.midtown.ai/
+  - About: https://mkdocs-www.midtown.ai/about
   - Tests:
     - Tests: index.md
     - Template: template.md
@@ -279,7 +282,8 @@ nav:
     - Megaphone Podcasts: megaphone_podcasts.md
     - Social Card: social_card.md
     - Substack Newsletter: substack_newsletter.md
-  - About: https://mkdocs-www.midtown.ai/about
+    - Blog:
+      - blog/index.md
 
 #
 # Remove warnings for the following pages if not in the navigation
