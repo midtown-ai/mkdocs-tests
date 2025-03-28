@@ -1,0 +1,52 @@
+/*
+ * Colors
+ */
+
+.twitter-blue {
+  color: #1DA1F2;
+}
+.youtube-red {
+  color: #EE0F0F;
+}
+
+.red {
+  color: red
+ }
+
+/*
+ * Sizing
+ */
+.font24px {
+    font-size: 24px; /* Customize font size */
+}
+.font42px {
+    font-size: 42px; /* Customize font size */
+}
+
+/*
+ * Position
+ */
+.center-text {
+    text-align: center;
+}
+/*
+ * Permalink
+ */
+.without-permalink {
+    pointer-events: none;
+}
+.custom-permalink .headerlink::before {
+    content: "\f0c1"; /* FontAwesome link icon (Unicode) */
+    font-family: "Font Awesome 5 Free"; /* Ensure correct font */
+    font-weight: 900;
+}
+
+/*
+ * Empty div spacers
+ */
+.spacer20 {
+    height: 20px; /* Adjust as needed */
+}
+.spacer40 {
+    height: 40px; /* Adjust as needed */
+}
