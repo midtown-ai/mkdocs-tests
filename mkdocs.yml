@@ -281,6 +281,8 @@ nav:
     - Google Slides: google_slides.md
     - Megaphone Podcasts: megaphone_podcasts.md
     - Social Card: social_card.md
+    - No Social Card: no_social_card.md
+    - Custom Social Card: custom_social_card.md
     - Substack Newsletter: substack_newsletter.md
     - Blog:
       - blog/index.md
@@ -384,7 +386,7 @@ plugins:
       # concurrency: 1        # (SO) number of CPU cores to use to generate the cards
       # cache: false          # (SO) bypass the cache and regenerate the enter set of cards
       cache_dir: !ENV [SOCIAL_CACHE_DIR, .cache/plugins/social] # Where the generated cards are locally saved
-      cards: true             # build or do not build cards by default
+      cards: true             # build or do not build social cards for each page by default (hide.social: true to disable)
       # cards_layout: custom  # (SO) name of the default layout in the layout_dir to use
       # cards_layout_dir: layouts # (SO) directory where the card layouts are stored
       cards_layout_options:
