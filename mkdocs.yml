@@ -269,6 +269,7 @@ nav:
   - Tests:
     - Tests: index.md
     - Template: template.md
+    - Jinja: jinja.md
     - Basics: basics.md
     - Blocks: blocks.md
     - CSS: css.md
@@ -280,12 +281,14 @@ nav:
     - YouTube Videos: youtube_videos.md
     - Google Slides: google_slides.md
     - Megaphone Podcasts: megaphone_podcasts.md
-    - Social Card: social_card.md
-    - No Social Card: no_social_card.md
-    - Custom Social Card: custom_social_card.md
+    - Social Card:
+      - Default: social_card.md
+      - No Social Card: no_social_card.md
+      - Custom Social Cards: custom_social_cards.md
     - Substack Newsletter: substack_newsletter.md
     - Blog:
       - blog/index.md
+    - Custom plugins: custom_plugins.md
 
 #
 # Remove warnings for the following pages if not in the navigation

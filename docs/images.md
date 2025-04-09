@@ -3,10 +3,10 @@
 
 ## Relative path
 
-![](../img/illustration.png){style="width:40%"}
+![](./img/illustration.png){style="width:40%"}
 
 ```
-![](../img/illustration.png){style="width:40%"}
+![](./img/illustration.png){style="width:40%"}
 ```
 
 ## Absolute path
@@ -19,13 +19,13 @@
 
 ## Caption
 
-![](../img/illustration.png){style="width:40%"}
+![](./img/illustration.png){style="width:40%"}
 /// caption
 Image and caption are automatically centered!
 ///
 
 ```
-![](../img/illustration.png){style="width:40%"}
+![](./img/illustration.png){style="width:40%"}
 /// caption
 Image and caption are automatically centered!
 ///
@@ -41,7 +41,7 @@ Image and caption are automatically centered!
 </div>
 
 ```
-# note the path to the image files is 1 directory up!
+# <!> note the path to the image files is 1 directory up!
 
 <div class="theme-image">
   <img src="../img/zelda_light_mode.png" alt="Light Mode Image" class="light-mode">
@@ -56,7 +56,6 @@ Image and caption are automatically centered!
 
 # or to select a particular image in the div
 
-.theme-image .light-mode {
     /* Styles for the light mode image */
 }
 ```
@@ -75,8 +74,8 @@ Image and caption are automatically centered!
 
 # to html
 
-<p><img alt="" class="light-mode" src="../img/zelda_light_mode.png" style="width:40%">
-<img alt="" class="dark-mode" src="../img/zelda_dark_mode.png" style="width:40%"></p></div>
+<img alt="" class="light-mode" src="img/zelda_light_mode.png" style="width:40%">
+<img alt="" class="dark-mode" src="img/zelda_dark_mode.png" style="width:40%">
  
 # CSS selector
 
@@ -98,8 +97,8 @@ img.light-mode {
 
 # to html
 
-<img alt="" class="theme-image light-mode" src="../img/zelda_light_mode.png" style="width:40%">
-<img alt="" class="theme-image dark-mode" src="../img/zelda_dark_mode.png" style="width:40%"></p>
+<img alt="" class="theme-image light-mode" src="img/zelda_light_mode.png" style="width:40%">
+<img alt="" class="theme-image dark-mode" src="img/zelda_dark_mode.png" style="width:40%"></p>
 
 # CSS selector
 

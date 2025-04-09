@@ -1,10 +1,41 @@
-{#-
-  This file was automatically generated - do not edit
--#}
 {% extends "base.html" %}
 
 {% block extrahead %}
   <link rel="stylesheet" href="{{ 'stylesheets/custom.7c86dd97.min.css' | url }}">
+  {% if page and page.meta and page.meta.extrahead and page.meta.extrahead.robots %}
+    <meta name="robots" content="{{ page.meta.extrahead.robots }}" />
+  {% else %}
+    <meta name="robots" content="index, follow" />
+  {% endif %}
+
+  <!-- social card -->
+  <meta  property="og:type"  content="website" >
+  <meta  property="og:title"  content="{{ page.title }} - {{ config.site_name }}" >
+  <meta  property="og:description"  content="{{ config.site_description }}" >
+
+  <meta  property="og:image:type"  content="image/png" >
+  <meta  property="og:image:width"  content="1200" >
+  <meta  property="og:image:height"  content="630" >
+
+  <meta  property="og:url"  content="{{ page.canonical_url }}" >
+
+  {% if page and page.meta and page.meta.extrahead and page.meta.extrahead.social and page.meta.extrahead.social.image_file%}
+    <meta  property="og:image"  content="{{ config.site_url | trim('/')}}/{{ page.meta.extrahead.social.image_file | default('img/default-social-car    d.png') }}" >
+  {% else %}
+    <meta  property="og:image"  content="{{ config.site_url | trim('/')}}/img/default-social-card.png }}" >
+  {% endif %}
+
+  <!-- twitter card -->
+  <meta  name="twitter:card"  content="summary_large_image" >
+  <meta  name="twitter:title"  content="{{ page.title }} - {{ config.site_name }}" >
+  <meta  name="twitter:description"  content="{{ config.site_description }}" >
+
+  {% if page and page.meta and page.meta.extrahead and page.meta.extrahead.social and page.meta.extrahead.social.image_file%}
+    <meta  name="twitter:image"  content="{{ config.site_url | trim('/') }}/{{page.meta.extrahead.social.image_file | default('img/default-social-card.png') }}" >
+  {% else %}
+    <meta  property="og:image"  content="{{ config.site_url | trim('/')}}/img/default_social_card.png" >
+  {% endif %}
+
 {% endblock %}
 
 {#- Note: Disabled for now! /!\ Appears on every pages

@@ -43,7 +43,7 @@ text below rule
 Work:
 
  * https://www.ggogle.com
- * [markdown link to code-block](/tests/blocks.md#code-block)
+ * [markdown link to code-block](./blocks.md#code-block)
  * [in-page Reference-Style external Links][markdown syntax]
  * [in-page Reference-Style internal Links][glossary link]
  * [markdown syntax]
@@ -55,7 +55,7 @@ Work:
 ```
 
 [markdown syntax]: https://daringfireball.net/projects/markdown/syntax#link "title"
-[glossary link]: /tests/blocks.md#code-block "title"
+[glossary link]: /blocks.md#code-block "title"
 
 ```
 Deprecated by snippets

@@ -19,11 +19,12 @@ description: This is my cool page description (Social Card)
 
 Check the generated social card for that page!
 
-Local
+When running locally
 
  * http://127.0.0.1:9000/mkdocs-tests/
  * http://127.0.0.1:9000/mkdocs-tests/assets/images/social/tests/index.png
  * http://127.0.0.1:9000/mkdocs-tests/assets/images/social/tests/social_card.png
+ * http://127.0.0.1:9000/assets/images/social/index.png
 
 Github
 

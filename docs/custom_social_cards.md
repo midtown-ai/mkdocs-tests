@@ -23,3 +23,5 @@ image: /img/social/custom_social_card.png
 
 Check the generated social card for that page!
 
+https://github.com/squidfunk/mkdocs-material/blob/master/src/plugins/social/plugin.py
+
