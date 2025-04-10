@@ -102,9 +102,22 @@ _.value = something
 {{ super() }}                 - calls the content of the block as defined in the parent template
                               - used to add or modify a block content, rather than replace it
 
+{{ self.open_graph_card() }}   - insert the content of the open_graph_card block IN THIS TEMPLATE FILE
+```
+
+```
 {% block extrahead %}
   {{ super() }}
   <link rel="stylesheet" href="{{ 'styles/custom.css' | url }}">
+
+  {{ self.open_graph_card() }}   - insert the content of the open_graph_card block
+{% endblock %}
+
+{% block open_graph_card }}
+  <meta  property="og:type"  content="website" >
+  <meta  property="og:title"  content="Jinja - Midtown AI" >
+  <meta  property="og:description"  content="Let's explore this transforming technology. Let's shape the future of AI together." >
+  <!-- etc -->
 {% endblock %}
 
 ```
@@ -136,6 +149,7 @@ title="{{ lang.t('search.reset') }}"  - inserts the translated string for search
 More at https://jinja.palletsprojects.com/en/latest/templates/#template-inheritance
 
 ```
+<!-- include works everywhere in the jinja template -->
 {% include "partials/javascripts/announce.html" %}   - include a partial HTML file
 ```
 
@@ -146,6 +160,9 @@ More at https://jinja.palletsprojects.com/en/latest/templates/#template-inherita
 {#- Beginning of multi-line comment in Jinja template only
 
 -#}
+
+{%- set title = "My Site" -%}           - trim white spaces around the block
+<title>{{- title -}}</title>            - suppress black lines and spaces
 ```
 
 ### macros imports
@@ -248,6 +265,36 @@ More at https://jinja.palletsprojects.com/en/latest/templates/#template-inherita
 
 {% if page.meta and page.meta.hide %}
 
+```
+
+#### Compression
+
+```
+{% if page and page.meta and page.social_card and page.social_card.title %}
+    <meta  property="og:title"  content="{{ page.meta.social_card.title }}" >
+    <meta  property="twitter:title"  content="{{ page.meta.social_card.title }}" >
+{% else %}
+    <meta  property="og:title"  content="{{ page.title }} - {{ config.site_name }}" >
+    <meta  property="twitter:title"  content="{{ page.title }} - {{ config.site_name }}" >
+{% endif %}
+```
+Can be compressed as
+```
+{% set title = page.meta.social_card.title if page and page.meta and page.meta.social_card and page.meta.social_card.title else page.title ~ ' - ' ~ config.site_name %}
+
+<meta property="og:title" content="{{ title }}">
+<meta property="twitter:title" content="{{ title }}">
+```
+which can be made more readable with
+```
+{% set title = (
+    page.meta.social_card.title
+    if page and page.meta and page.meta.social_card and page.meta.social_card.title
+    else page.title ~ ' - ' ~ config.site_name
+) %}
+
+<meta property="og:title" content="{{ title }}">
+<meta property="twitter:title" content="{{ title }}">
 ```
 
 ### For loop

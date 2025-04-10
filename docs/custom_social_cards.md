@@ -6,10 +6,24 @@ title: Not a Cool Page (Social Card)
 description: This is my cool page description (Social Card)
 image: /img/social/custom_social_card.png
 
-# hide:
-#   social: true
+template: main.html
+
+robots: noindex, nofollow
+social_card:
+  title: my-title
+  description: my description
+  anchor: testing-area
+  image:
+    file: img/social_cards/custom_social_card.png
+    format: png
+    width: 1200
+    height: 630
 
 # Sponsor only
+#
+# hide:
+#   social: true
+#
 # social:
 #   cards: true
 #   cards_layout_options:
@@ -25,3 +39,6 @@ Check the generated social card for that page!
 
 https://github.com/squidfunk/mkdocs-material/blob/master/src/plugins/social/plugin.py
 
+# Testing area
+
+ * Examples - https://github.com/mkdocs-material/examples/tree/master

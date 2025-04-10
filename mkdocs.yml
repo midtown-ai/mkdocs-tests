@@ -385,7 +385,8 @@ plugins:
   # - projects                # split very large sites into smaller ones for faster rebuild and parallel development
   - search                    # add search bar to header and enable search
   - social:                   # used to build social card for post on WhatsApp, etc
-      enabled: !ENV [SOCIAL_PLUGIN_ENABLED, true]
+      # enabled: !ENV [SOCIAL_PLUGIN_ENABLED, true]
+      enabled: false
       # concurrency: 1        # (SO) number of CPU cores to use to generate the cards
       # cache: false          # (SO) bypass the cache and regenerate the enter set of cards
       cache_dir: !ENV [SOCIAL_CACHE_DIR, .cache/plugins/social] # Where the generated cards are locally saved

@@ -1,0 +1,38 @@
+{%- set site_url = config.site_url | trim('/') -%}
+{%- set social_card =
+    page.meta.social_card
+    if page and page.meta and page.meta.social_card
+    else {}
+-%}
+
+{%- set card_description = social_card.description if social_card.description else config.site_description -%}
+{%- set card_title = social_card.title if social_card.title else page.title ~ ' - ' ~ config.site_name -%}
+{%- set card_type = social_card.type if social_card.type else 'website' -%}
+{%- set card_anchor = social_card.anchor if social_card.anchor else '' -%}
+{%- set card_url = page.canonical_url ~ '#' ~ card_anchor -%}
+
+{%- set image =
+    page.meta.social_card.image
+    if page and page.meta and page.meta.social_card and page.meta.social_card.image
+    else {}
+-%}
+{%- set image_width = image.width if image.width else '1200' -%}
+{%- set image_height = image.height if image.height else '630' -%}
+{%- set image_file = image.file if image.file else 'img/default_social_card.png' -%}
+{%- set image_type = image.type if image.type else 'image/png' -%}
+
+<!-- block social_card -->
+<meta property="og:description"  content="{{ card_description }}" >
+<meta property="og:title" content="{{ card_title }}">
+<meta property="og:type"  content="{{ card_type }}" >
+<meta property="og:url"  content="{{ card_url }}" >
+<meta property="og:image"  content="{{ site_url }}/{{ image_file }}" >
+<meta property="og:image:type"  content="{{ image_type }}" >
+<meta property="og:image:width"  content="{{ image_width }}" >
+<meta property="og:image:height"  content="{{ image_height }}" >
+
+<meta name="twitter:card"  content="summary_large_image" >
+<meta name="twitter:image"  content="{{ site_url }}/{{ image_file }}" >
+<meta name="twitter:description" content="{{ card_description }}" >
+<meta name="twitter:title" content="{{ card_title }}">
+<!-- endblock social_card -->

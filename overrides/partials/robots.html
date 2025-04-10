@@ -1,0 +1,9 @@
+{%- set robots = (
+    page.meta.robots
+    if page and page.meta and page.meta.robots
+    else 'index, follow'
+) -%}
+
+<!-- block robots -->
+<meta name="robots" content="{{ robots }}" />
+<!-- endblock robots -->
