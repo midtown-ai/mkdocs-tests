@@ -4,14 +4,13 @@
 # Used in social cards and RSS feed
 title: Not a Cool Page (Social Card)
 description: This is my cool page description (Social Card)
-image: /img/social/custom_social_card.png
 
 template: main.html
 
 robots: noindex, nofollow
 social_card:
   title: my-title
-  description: my description
+  description: This is my description
   anchor: testing-area
   image:
     file: img/social_cards/custom_social_card.png
