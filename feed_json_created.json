@@ -1,0 +1,62 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Midtown AI (blog feed)",
+    "home_page_url": "https://tests.midtown.ai/",
+    "feed_url": "https://tests.midtown.ai/feed_json_created.json",
+    "description": "Let's explore this transforming technology. Let's shape the future of AI together.",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg.png",
+    "authors": [
+        {
+            "name": "info@midtown.ai (Emmanuel M.)"
+        }
+    ],
+    "language": "en",
+    "items": [
+        {
+            "id": "https://tests.midtown.ai/blog/bonjour-monde/",
+            "url": "https://tests.midtown.ai/blog/bonjour-monde/?utm_campaign=feed-syndication&utm_medium=RSS&utm_source=documentation",
+            "title": "Bonjour Monde!",
+            "content_html": "This is the page description (Bonjour monde)",
+            "image": null,
+            "date_published": "2025-01-31T00:00:00+00:00",
+            "authors": [
+                {
+                    "name": "Emmanuel's Empirical Evidence"
+                },
+                {
+                    "name": "Florian's Fantastic Findings"
+                },
+                {
+                    "name": "Oceanne's Outstanding Observations"
+                }
+            ],
+            "tags": [
+                "Category_A",
+                "Category_B"
+            ]
+        },
+        {
+            "id": "https://tests.midtown.ai/blog/hello-world/",
+            "url": "https://tests.midtown.ai/blog/hello-world/?utm_campaign=feed-syndication&utm_medium=RSS&utm_source=documentation",
+            "title": "Hello World!",
+            "content_html": "This is the page description",
+            "image": null,
+            "date_published": "2025-01-01T00:00:00+00:00",
+            "authors": [
+                {
+                    "name": "Emmanuel's Empirical Evidence"
+                },
+                {
+                    "name": "Florian's Fantastic Findings"
+                },
+                {
+                    "name": "Oceanne's Outstanding Observations"
+                }
+            ],
+            "tags": [
+                "Category_A",
+                "Category_B"
+            ]
+        }
+    ]
+}

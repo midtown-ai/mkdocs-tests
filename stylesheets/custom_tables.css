@@ -1,0 +1,67 @@
+/* General table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Light mode styles */
+[data-md-color-scheme="default"] table {
+    background-color: #ffffff; /* White background for light mode */
+    color: #333; /* Dark text color */
+    border: 1px solid #ddd; /* Light border */
+}
+
+[data-md-color-scheme="default"] table th {
+    background-color: #f4f4f4; /* Light gray for headers */
+    color: #333; /* Dark text for headers */
+}
+
+[data-md-color-scheme="default"] table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray for alternate rows */
+}
+
+[data-md-color-scheme="default"] table tr:nth-child(odd) {
+    background-color: #ffffff; /* White for alternate rows */
+}
+
+[data-md-color-scheme="default"] table td {
+    border: 1px solid #ddd; /* Light border for cells */
+    padding: 10px;
+}
+
+/* Dark mode styles */
+[data-md-color-scheme="slate"] table {
+    background-color: #1e1e2f; /* Dark background for table */
+    color: #eaeaea; /* Light text color for contrast */
+    border: 1px solid #444; /* Dark border */
+}
+
+[data-md-color-scheme="slate"] table th {
+    background-color: #333348; /* Darker background for headers */
+    color: #eaeaea; /* Light text for headers */
+}
+
+[data-md-color-scheme="slate"] table tr:nth-child(even) {
+    background-color: #29293d; /* Slightly lighter for alternate rows */
+}
+
+[data-md-color-scheme="slate"] table tr:nth-child(odd) {
+    background-color: #1e1e2f; /* Same as table background */
+}
+
+[data-md-color-scheme="slate"] table td {
+    border: 1px solid #444; /* Darker border for cells */
+    padding: 10px;
+}
+
+/* SVG inside table (icons) */
+table .twemoji svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor; /* Matches text color dynamically */
+    vertical-align: middle;
+}
+
